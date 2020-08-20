@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>ISBN Handlebars</title>
+</head>
+<body>
+
+  <form>
+    <input type="text" id="title" name="title" value="" placeholder="Please enter a Book Title">
+    <button type="submit">Find Book</button>
+  </form>
+  <ul class="books">
+  <!-- // Step 1: Create template -->
+    <script id="book" type="text/x-handlebars-template">
+      <li>
+        <h2>Author(s): {{authors}}</h2>
+        <h2>Title: {{title}}</h2>
+        <p>Description: {{description}}</p>
+        <img src="{{imageLinks.thumbnail}}"><br>
+        <a href="{{previewLink}}">Preview Book</a>
+      </li>
+    </script>
+  </ul>
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="js/handlebars-v4.7.6.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
